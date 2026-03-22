@@ -1,10 +1,8 @@
-import 'math_utils.dart';
-
-void main() {
-  List<String> fruits = ["Apple", "Banana"];
-  fruits.add("Mango");
-  print(fruits[1]);
-}
+// void main() {
+//   List<String> fruits = ["Apple", "Banana"];
+//   fruits.add("Mango");
+//   print(fruits[1]);
+// }
 
 // void main() {
 //   int result = add(5, 3);
