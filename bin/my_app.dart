@@ -1,59 +1,34 @@
-// void main() {
-//   List<String> fruits = ["Apple", "Banana"];
-//   fruits.add("Mango");
-//   print(fruits[1]);
-// }
+void main() async {
+  //await use කරන්න පුළුවන් async function එක ඇතුළත විතරයි
+  String result = await getData();
+  //   "getData complete වෙනකම් wait වෙන්න"
+  // result එක variable එකට assign කරන්න
+  print(result);
+}
+
+Future<String> getData() async {
+  return "Hello";
+}
+
+// 🔹 3. async / await (MOST IMPORTANT)
+// 👉 Future එක handle කරන easy way එක
 
 // void main() {
-//   int result = add(5, 3);
-//   print(result);
-
-//   print(multiply(2, 4));
+//   getData().then((value) {
+//     print(value);
+//   });
 // }
 
-// void main() {
-//   var amount = calculateDiscount(1000);
-//   print(amount['message']);
+// Future<String> getData() async {
+//   return "Hello";
 // }
 
-// Map<String, dynamic> calculateDiscount(double price) {
-//   if (1000 < price) {
-//     return {'price': price * 0.9, 'message': 'Discount Applied'};
-//   } else {
-//     return {'price': price, 'message': 'Discount Not Aplied!'};
-//   }
-// }
+// 🔹 2. Future කියන්නේ මොකක්ද?
+// 👉 Future = future එකේ ලැබෙන value එකක්
 
-// bad for scalling ------------------------
-
-// void main() {
-//   int add(int a, int b) {
-//     return a + b;
-//   }
-
-//   print(add(1, 9));
-// }
-
-// -----------------------------------------
-
-// meth 2 ----------------------------------
-
-// void main() {
-//   var count = add(1, 6);
-//   print(count);
-// }
-
-// int add(int a, int b) {
-//   return a + b;
-// }
-
-// meth 2 closed -------------------------
-
-// void sampleFuncOneCalling() {
-//   sampleFuncTwoCalling();
-//   print('Func One');
-// }
-
-// void sampleFuncTwoCalling() {
-//   print('sample func 2');
+// Future<String> getData() {
+//   return Future.delayed(Duration(seconds: 3), () {
+//     print('executed');
+//     return "";
+//   });
 // }
