@@ -1,10 +1,13 @@
 void main() {
-  // data types
-  int age = 25;
-  double price = 10.5;
-  String name = 'Maneesha';
-  bool isActive = true;
+  print('Main Func');
+  sampleFuncOneCalling();
+}
 
-  //type Inference
-  var city = 'Hello';
+void sampleFuncOneCalling() {
+  sampleFuncTwoCalling();
+  print('Func One');
+}
+
+void sampleFuncTwoCalling() {
+  print('sample func 2');
 }
