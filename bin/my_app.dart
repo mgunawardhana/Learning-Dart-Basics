@@ -1,9 +1,20 @@
+Future<String> task1() async {
+  await Future.delayed(Duration(seconds: 2));
+  return "Task 1 done";
+}
+
+Future<String> task2() async {
+  await Future.delayed(Duration(seconds: 1));
+  return "Task 2 done";
+}
+
 void main() async {
-  //await use කරන්න පුළුවන් async function එක ඇතුළත විතරයි
-  String result = await getData();
-  //   "getData complete වෙනකම් wait වෙන්න"
-  // result එක variable එකට assign කරන්න
-  print(result);
+  var t1 = await task1();
+  var t2 = await task2();
+
+  print(t1);
+  print('middle');
+  print(t2);
 }
 
 Future<String> getData() async {
